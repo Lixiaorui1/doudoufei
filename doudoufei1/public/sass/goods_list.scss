@@ -1,0 +1,43 @@
+@import"reset";
+.right_bottom_list{
+                background: #fff;
+                display: block;
+                table{
+                    width: 100%;
+                    border: 1px solid #ccc;
+                    td{
+                        border: 1px solid #ccc;
+                        text-align: center;
+                        color: #333;
+                        height: 30px;
+                    }
+                }
+            }
+.page{
+    margin-top: 7px;
+    padding-right: 10px;
+    text-align: right;
+    line-height: 30px;
+    input{
+        vertical-align: middle;
+        text-align: center;
+    }
+    a{
+        color: #333;
+    }
+    a:hover{
+        color: red;
+        text-decoration: underline;
+    }
+}
+#footer{
+    background: #f3f3f3 url(../images/th_bg.gif) repeat-x;
+    border:1px solid #ddd;
+    padding: 15px;
+    color: #9CACAF;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+

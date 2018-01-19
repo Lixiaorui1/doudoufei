@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/add_list.css"/>
+	</head>
+	<body>
+		<div class="right_bottom_add ">
+			<ul>
+				<li>通用信息</li>
+				<li>详细描述</li>
+				<li>其他信息</li>
+				<li>商品属性</li>
+				<li>商品相册</li>
+				<li>关联商品</li>
+				<li>配件</li>
+				<li>关联文章</li>
+			</ul>
+			<div class="add_main">
+				<form action="" >
+					<p class='clear'><i>商品名称：</i><b><input type="text" id="goods_name"/><em>&nbsp;&nbsp;&nbsp;*</em></b></p>
+					<p><i><img src="/images/notice.gif"/>商品货号：</i><b><input type="text" id="goods_number"/><br/>如果您不输入商品货号，系统将自动生成一个唯一的货号。</b></p>
+					<p><i>商品分类：</i><b><select name="" id="goods_class">
+						<option value="">请选择…</option>
+						<option value="">钻石</option>
+						<option value="">&nbsp;&nbsp;裤子</option>
+						<option value="">&nbsp;&nbsp;&nbsp;&nbsp;休闲裤</option>
+						<option value="">&nbsp;&nbsp;&nbsp;&nbsp;休闲短裤</option>
+						<option value="">&nbsp;&nbsp;&nbsp;&nbsp;牛仔裤</option>
+						<option value="">&nbsp;&nbsp;&nbsp;&nbsp;西裤</option>
+						<option value="">&nbsp;&nbsp;&nbsp;&nbsp;牛仔中裤</option>
+						<option value="">&nbsp;&nbsp;&nbsp;&nbsp;休闲分裤</option>
+					</select><em>&nbsp;&nbsp;&nbsp;*</em></b></p>
+					<p><i>扩展分类：</i><b><input type="button" value="添加"/></b></p>
+					<p><i>商品品牌：</i><b><select name="">
+						<option value="">请选择…</option>
+						<option value="">kk</option>
+						<option value="">溢彩年华</option>
+						<option value="">EVENY</option>
+						<option value="">圣迪奥</option>
+						<option value="">韩都衣舍</option>
+						<option value="">艾夫斯</option>
+						<option value="">太平鸟</option>
+						<option value="">帮宝适</option>
+					</select><input type="text" /></b></p>
+					<p><i>本店售价：</i><b><input type="text" value="0" id="price"/><input type="button" value="按市场价计算"/><em>&nbsp;&nbsp;&nbsp;*</em></b></p>
+					<p><i><img src="/images/notice.gif"/>会员价格：</i><b>注册用户 <input type="text" value="-1"/> 代销用户 <input type="text" value="-1"/> VIP <input type="text" value="-1"/><br/>会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每个等级指定一个固定价格</b></p>
+					<p><i><img src="/images/notice.gif"/>商品优惠价格：</i><b>[+]优惠数量<input type="text" />优惠价格<input type="text" /><br/>购买数量达到优惠数量时享受的优惠价格</b></p>
+					<p><i>市场售价：</i><b><input type="text" value="0"/></b></p>
+					<p><i>虚拟销量：</i><b><input type="text" value="0" id="virtual"/></b></p>
+					<p><i><img src="/images/notice.gif"/>赠送消费积分数：</i><b><input type="text" value="-1"/><br/>购买该商品时赠送消费积分数,-1表示按商品价格赠送</b></p>
+					<p><i><img src="/images/notice.gif"/>赠送等级积分数：</i><b><input type="text" value="-1"/><br/>购买该商品时赠送等级积分数,-1表示按商品价格赠送</b></p>
+					<p><i><img src="/images/notice.gif"/>积分购买金额：</i><b><input type="text" value="0"/><br/>(此处需填写金额)购买该商品时最多可以使用积分的金额</b></p>
+					<p><i><input type="checkbox" class="check"/>促销价：</i><b><input type="text" value="0"/></b></p>
+					<p><i>促销日期：</i><b><input type="text" value="2018-1-16" />&nbsp;<input type="button" value="选择" class="option"/>&nbsp;-&nbsp;<input type="text" value="2018-2-16"/>&nbsp;<input type="button" value="选择" class="option"/></b></p>
+					<p><i>上传商品图片：</i><b><input type="file" id="img"/><br/><input type="text" value="商品图片外部URL" /></b></p>
+					<p><i>上传商品缩略图：</i><b><input type="file" /><br/><input type="text" value="商品缩略图外部URL" /><br/><input type="checkbox" /> 自动生成商品缩略图</b></p>	
+				</form>
+			</div>
+			<div class="detail_main">
+				<textarea name="" rows="" cols=""></textarea>
+			</div>
+			<div class="other_main">
+				<table class="other_form">
+					<tr>
+						<td>商品重量：</td>
+						<td>
+							<input type="text" />&nbsp;
+							<select name="">
+								<option value="">千克</option>
+								<option value="">克</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="/images/notice.gif"/>商品库存数量：</td>
+						<td><input type="text" value="1" id='inventory'/><br/> 	
+库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</td>
+					</tr>
+					<tr>
+						<td>库存警告数量：</td>
+						<td><input type="text" value="1"/></td>
+					</tr>
+					<tr>
+						<td>加入推荐：</td>
+						<td><input type="checkbox" />&nbsp;精品&nbsp;&nbsp;<input type="checkbox" />&nbsp;新品&nbsp;&nbsp;<input type="checkbox" />&nbsp;热销&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>上架：</td>
+						<td><input type="checkbox" checked="checked"/>&nbsp;打勾表示允许销售，否则不允许销售。</td>
+					</tr>
+					<tr>
+						<td>能作为普通商品销售：</td>
+						<td><input type="checkbox" checked="checked"/>&nbsp;打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。</td>
+					</tr>
+					<tr>
+						<td>是否为免运费商品：</td>
+						<td><input type="checkbox" />&nbsp;打勾表示此商品不会产生运费花销，否则按照正常运费计算。</td>
+					</tr>
+					<tr>
+						<td>商品关键词：</td>
+						<td><input type="text" style="width: 308px;"/>&nbsp;用空格分隔</td>
+					</tr>
+					<tr>
+						<td>商品简单描述：</td>
+						<td><textarea name="" rows="4" cols="40"></textarea></td>
+					</tr>
+					<tr>
+						<td><img src="/images/notice.gif"/>商家备注：</td>
+						<td><textarea name="" rows="4" cols="40"></textarea><br/>仅供商家自己看的信息</td>
+					</tr>
+				</table>
+			</div>
+			<div class="attribute_main">
+				<table class="attribute_form">
+					<tr>
+						<td><img src="/images/notice.gif"/>商品类型：</td>
+						<td>
+							<select name="">
+								<option value="">请选择商品类型</option>
+								<option value="">书</option>
+								<option value="">音乐</option>
+								<option value="">电影</option>
+								<option value="">手机</option>
+							</select><br />请选择商品的所属类型，进而完善此商品的属性
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="photo_main">
+				<p>[+]图片描述 <input type="text" /> 上传文件<input type="file" /><input type="text" value="或者输入外部图片链接地址"/></p>
+			</div>
+			<div class="btn_res">
+				<a href="javascript:;">确定</a>
+				<a href="javascript:;">重置</a>
+			</div>
+		</div>
+		<div id="footer">
+	    		
+共执行 9 个查询，用时 0.025606 秒，Gzip 已禁用，内存占用 3.578 MB<br>
+
+版权所有 ? 2005-2018 上海商派软件有限公司，并保留所有权利。
+    	</div>
+	</body>
+	<script type="text/javascript" src="/js/jquery-1.11.3.js" ></script>
+	<script type="text/javascript">
+		$(".right_bottom_add ul li").click(function(){
+			var index = $(this).index();
+			for(var i = 0;i < $(".right_bottom_add ul li").length;i ++){
+				$(".right_bottom_add ul li").eq(i).css({'background':'#efefef','font-weight':'100','color':'#787878'});
+				$("div[class$='main']").eq(i).css('display','none');
+			}
+			$(this).css({'background':'#fff','font-weight':'900','color':'#000'})
+			$("div[class$='main']").eq(index).css('display','block');
+		})
+		
+		//aJax添加商品数据
+		function upload() {
+			var form = new FormData(); // FormData是H5新特性
+			form.append("goods_name", document.getElementById("goods_name").value);
+			form.append("goods_number", document.getElementById("goods_number").value);
+			form.append("inventory", document.getElementById("inventory").value);
+			form.append("price", document.getElementById("price").value);
+			form.append("virtual", document.getElementById("virtual").value);
+			form.append("img", document.getElementById("img").files[0]);
+			
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", "/api/add_goods");
+			xhr.onreadystatechange = function(res){
+				if (xhr.readyState==4 && xhr.status==200) {
+					console.log(xhr.responseText);
+					var res = JSON.parse(xhr.responseText);
+					alert(res.message);
+					window.location = "./goods_list";
+				}
+			}
+			xhr.send(form);
+		}
+		$(".btn_res a").eq(0).click(function(){
+			
+			
+			upload();
+//			window.location = "./goods_list";
+//			location.href = "/goods_list";
+		})
+		
+		function update(){
+			var url = window.location.href.split('?');
+//			console.log(url[1]);
+			var goods_name = decodeURIComponent(url[1].split("&")[0]);
+			var price = url[1].split("&")[1];
+			var goods_number = url[1].split("&")[2];
+//			console.log(goods_name,price,goods_number);
+			$("#goods_name").val(goods_name);
+			$("#goods_number").val(goods_number);
+			$("#price").val(price);
+		}
+		update();
+	</script>
+</html>

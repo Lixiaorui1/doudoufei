@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/* CSS Document */
+body, h1, h3, h2, h4, h5, h6, p, dl, dd, ul, ol, form, input, fieldset, th, td, iframe {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: normal; }
+
+i, em {
+  font-style: normal; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+li {
+  list-style: none; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+input {
+  vertical-align: top; }
+
+a, input, area {
+  outline: none; }
+
+body {
+  font-size: 14px;
+  font-family: "微软雅黑"; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clear:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
+
+table {
+  border-collapse: collapse; }
+
+.border0, .noborder {
+  border: none; }
+
+html, body {
+  height: 100%; }
+
+/*--top--*/
+#top {
+  height: 116px;
+  background: #303030;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  #top h1 {
+    float: left;
+    margin: 17px 0 0 25px;
+    height: 39px;
+    width: 148px; }
+    #top h1 img {
+      height: 100%; }
+  #top .top_nav {
+    height: 73px;
+    float: right;
+    border-bottom: 1px solid #303030; }
+    #top .top_nav img {
+      width: 35px;
+      margin: 8px 0 8px; }
+    #top .top_nav li {
+      height: 73px;
+      font-size: 12px;
+      float: left;
+      width: 82px;
+      text-align: center; }
+      #top .top_nav li a {
+        color: #fff;
+        text-align: center; }
+    #top .top_nav li:nth-of-type(1) {
+      width: 100px; }
+
+.middle_nav {
+  background: #575757;
+  width: 100%;
+  height: 41px;
+  border-bottom: 1px solid #212121;
+  font-size: 12px; }
+  .middle_nav li {
+    float: left;
+    line-height: 41px;
+    color: #303030; }
+    .middle_nav li i {
+      float: right; }
+    .middle_nav li a {
+      display: inline-block;
+      color: #fff;
+      padding: 0 14px 0 11px; }
+      .middle_nav li a b {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/index-11_07.png) no-repeat;
+        vertical-align: middle;
+        margin-right: 5px; }
+      .middle_nav li a u {
+        display: inline-block;
+        width: 32px;
+        height: 16px;
+        border-radius: 5px;
+        background: #ff3f3f;
+        vertical-align: middle;
+        line-height: 16px;
+        text-decoration: none;
+        text-align: center;
+        margin-left: 7px; }
+  .middle_nav li:nth-of-type(1) {
+    margin-left: 25px; }
+  .middle_nav li:nth-of-type(2) b {
+    background: url(../images/index-11_41.png) no-repeat; }
+  .middle_nav li:nth-of-type(3) b {
+    background: url(../images/index-11_09.png) no-repeat; }
+  .middle_nav li:nth-of-type(4) b {
+    background: url(../images/dd.png) no-repeat; }
+  .middle_nav li:nth-of-type(5) b {
+    background: url(../images/index-11_13.png) no-repeat; }
+  .middle_nav li:nth-of-type(6) b {
+    background: url(../images/index-11_19.png) no-repeat; }
+
+/*--main--*/
+#main {
+  width: 100%;
+  position: absolute;
+  top: 116px;
+  bottom: 0; }
+  #main .left {
+    width: 184px;
+    height: 100%;
+    float: left;
+    overflow-y: scroll; }
+    #main .left h2 {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 34px;
+      color: #fff;
+      background: #303030;
+      border-bottom: 1px solid #7f7f7f;
+      padding-left: 22px; }
+    #main .left .left_list {
+      background: #575757; }
+      #main .left .left_list li {
+        border-bottom: 1px solid #7f7f7f;
+        line-height: 42px; }
+        #main .left .left_list li a {
+          width: 100%;
+          display: inline-block;
+          color: #d7d7d7; }
+          #main .left .left_list li a i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../images/index-11_09.png) no-repeat;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-left: 5px; }
+          #main .left .left_list li a em {
+            float: right;
+            margin-right: 20px;
+            font-weight: 900; }
+        #main .left .left_list li .left_list2 {
+          border-top: 1px solid #7f7f7f;
+          background: #575757;
+          display: none; }
+          #main .left .left_list li .left_list2 li {
+            padding-left: 30px;
+            color: #d7d7d7;
+            font-size: 12px;
+            border: none;
+            line-height: 30px; }
+  #main .right {
+    overflow: auto;
+    height: 100%;
+    background: url(/images/bg.png); }
+    #main .right .right_left {
+      float: left;
+      height: 100%;
+      width: 10px;
+      background: #303030; }
+    #main .right .right_right {
+      height: 100%;
+      overflow: auto;
+      padding: 0 10px; }
+      #main .right .right_right .list_top {
+        height: 54px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px; }
+        #main .right .right_right .list_top h3 {
+          float: left;
+          font-size: 18px;
+          color: #333;
+          line-height: 60px;
+          margin-left: 15px; }
+        #main .right .right_right .list_top #top_add {
+          float: right;
+          width: 85px;
+          height: 26px;
+          font-size: 12px;
+          color: #fff;
+          background: #c43926;
+          border: none;
+          border-radius: 4px;
+          margin: 19px 15px 0 0; }
+      #main .right .right_right .right_bottom_list {
+        background: #fff;
+        display: block; }
+        #main .right .right_right .right_bottom_list table {
+          width: 100%;
+          border: 1px solid #ccc; }
+          #main .right .right_right .right_bottom_list table td {
+            border: 1px solid #ccc;
+            text-align: center;
+            color: #333;
+            height: 30px; }
+      #main .right .right_right .right_bottom_add {
+        border: 1px solid #d7d7d7;
+        display: none; }
+        #main .right .right_right .right_bottom_add ul {
+          background: #efefef;
+          color: #787878;
+          font-size: 14px;
+          line-height: 42px;
+          height: 42px;
+          padding-left: 10px; }
+          #main .right .right_right .right_bottom_add ul li {
+            float: left;
+            padding: 0 20px;
+            margin-top: 3px;
+            cursor: pointer;
+            height: 39px; }
+          #main .right .right_right .right_bottom_add ul li:nth-of-type(1) {
+            background: #fff; }
+        #main .right .right_right .right_bottom_add .add_main {
+          background: #fff;
+          padding-top: 20px; }
+          #main .right .right_right .right_bottom_add .add_main form {
+            width: 650px;
+            margin: 0 auto; }
+            #main .right .right_right .right_bottom_add .add_main form p {
+              font-size: 12px;
+              line-height: 30px;
+              color: #192e32;
+              margin-bottom: 10px; }
+              #main .right .right_right .right_bottom_add .add_main form p i {
+                font-weight: 900;
+                text-align: right;
+                width: 113px;
+                display: inline-block;
+                vertical-align: top; }
+                #main .right .right_right .right_bottom_add .add_main form p i img {
+                  vertical-align: middle;
+                  margin-right: 3px; }
+              #main .right .right_right .right_bottom_add .add_main form p b {
+                padding-left: 20px;
+                line-height: 20px;
+                display: inline-block;
+                color: #666; }
+                #main .right .right_right .right_bottom_add .add_main form p b input {
+                  height: 20px; }
+              #main .right .right_right .right_bottom_add .add_main form p em {
+                color: red; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(1) input {
+              width: 190px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(2) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(3) select {
+              width: 158px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(4) input {
+              width: 56px;
+              height: 28px;
+              color: #fff;
+              background: #f74b4b;
+              cursor: pointer;
+              border-radius: 4px;
+              border: none; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(5) select {
+              width: 106px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(6) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(7) input {
+              width: 63px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(8) input {
+              width: 63px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(9) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(10) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(11) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(12) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(13) input {
+              width: 133px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(14) input {
+              width: 133px;
+              background: #ccc; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(14) .check {
+              width: 11px;
+              vertical-align: middle;
+              margin-right: 5px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(15) input {
+              width: 87px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(15) .option {
+              width: 56px;
+              height: 28px;
+              color: #fff;
+              background: #f74b4b;
+              cursor: pointer;
+              border-radius: 4px;
+              border: none; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(16) input {
+              height: 24px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(16) input:nth-of-type(2) {
+              width: 248px;
+              font-size: 12px;
+              color: #666;
+              margin-top: 5px; }
+            #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(17) {
+              margin-bottom: 0; }
+              #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(17) input {
+                height: 24px; }
+              #main .right .right_right .right_bottom_add .add_main form p:nth-of-type(17) input:nth-of-type(2) {
+                width: 248px;
+                font-size: 12px;
+                color: #666;
+                margin-top: 5px; }
+        #main .right .right_right .right_bottom_add .detail_main {
+          height: 400px;
+          background: #fff;
+          display: none; }
+          #main .right .right_right .right_bottom_add .detail_main textarea {
+            width: 1050px;
+            height: 350px;
+            margin: 20px 0 0 38px; }
+        #main .right .right_right .right_bottom_add .other_main {
+          background: #fff;
+          padding-top: 20px; }
+          #main .right .right_right .right_bottom_add .other_main .other_form {
+            margin: 0 auto;
+            width: 730px; }
+            #main .right .right_right .right_bottom_add .other_main .other_form td {
+              padding-bottom: 15px;
+              vertical-align: top;
+              color: #333; }
+              #main .right .right_right .right_bottom_add .other_main .other_form td input {
+                height: 22px; }
+              #main .right .right_right .right_bottom_add .other_main .other_form td img {
+                vertical-align: middle; }
+            #main .right .right_right .right_bottom_add .other_main .other_form td:nth-of-type(1) {
+              text-align: right;
+              font-size: 14px;
+              font-weight: 900; }
+            #main .right .right_right .right_bottom_add .other_main .other_form td:nth-of-type(2) {
+              text-align: left;
+              padding-left: 6px; }
+        #main .right .right_right .right_bottom_add .attribute_main {
+          background: #fff;
+          padding-top: 20px; }
+          #main .right .right_right .right_bottom_add .attribute_main .attribute_form {
+            margin: 0 auto;
+            width: 730px; }
+            #main .right .right_right .right_bottom_add .attribute_main .attribute_form td {
+              padding-bottom: 15px;
+              vertical-align: top;
+              color: #666; }
+              #main .right .right_right .right_bottom_add .attribute_main .attribute_form td input {
+                height: 22px; }
+              #main .right .right_right .right_bottom_add .attribute_main .attribute_form td img {
+                vertical-align: middle;
+                margin-right: 5px; }
+            #main .right .right_right .right_bottom_add .attribute_main .attribute_form td:nth-of-type(1) {
+              text-align: right;
+              font-size: 14px;
+              font-weight: 900; }
+            #main .right .right_right .right_bottom_add .attribute_main .attribute_form td:nth-of-type(2) {
+              text-align: left;
+              padding-left: 6px; }
+        #main .right .right_right .right_bottom_add .photo_main {
+          background: #fff;
+          padding-top: 50px; }
+          #main .right .right_right .right_bottom_add .photo_main p {
+            width: 1000px;
+            margin: 0 auto;
+            color: #333; }
+            #main .right .right_right .right_bottom_add .photo_main p input {
+              height: 22px;
+              line-height: 22px; }
+            #main .right .right_right .right_bottom_add .photo_main p input:nth-of-type(3) {
+              width: 250px;
+              color: #787878;
+              border: 1px solid #787878; }
+        #main .right .right_right .right_bottom_add .btn_res {
+          background: #fff;
+          text-align: center;
+          padding: 15px 0; }
+          #main .right .right_right .right_bottom_add .btn_res a {
+            display: inline-block;
+            width: 61px;
+            height: 26px;
+            background: #ff3f3f;
+            color: #fff;
+            border-radius: 4px;
+            margin: 0 4px;
+            line-height: 26px; }

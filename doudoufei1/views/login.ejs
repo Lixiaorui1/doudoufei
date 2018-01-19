@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<meta charset="utf-8">
+	<link rel='stylesheet' href='/stylesheets/reset.css' />
+	<link rel="stylesheet" href="/stylesheets/iconfont.css">
+	<style type="text/css">
+		body{
+			background: url(/images/ecshop-bg.png);
+			background-size: cover;
+		}
+		h1{
+			margin: 20px auto;
+			height: 50px;
+			line-height: 50px;
+			font-size: 40px;
+			color: #fff;
+			width: 400px;
+			text-align: center;
+
+		}
+		#log_box{
+			margin: 0 auto;
+			background: #ddd;
+			width: 443px;
+			height: 302px;
+			padding-top: 50px;
+		}
+		form{
+			position: relative;
+		}
+		form input{
+			background: #fff;
+			width: 270px;
+			height: 50px;
+			line-height: 50px;
+			color: #a9a9a9;
+			font-size: 14px;
+			margin: 0 0 2px 0;
+			border: none;
+		}
+		form i{
+			width: 20px;
+			vertical-align: middle;
+			line-height: 50px;
+			background: #fff;
+			display:inline-block;
+			margin-left: 70px;
+			padding: 0 7px;
+			color: #8b8b8b;
+		}
+		.verification{
+			position: absolute;
+			width: 102px;
+			height: 35px;
+			background: #ecc20c;
+			left: 263px;
+			top: 111px;
+			border: 1px solid #ddd;
+			cursor: pointer;
+			text-align: center;
+			line-height: 35px;
+			z-index: 100;
+		}
+		button{
+			background: #fc7878;
+			width: 300px;
+			height: 50px;
+			line-height: 50px;
+			margin: 20px 0 0 70px;
+			border: none;
+			border-radius: 4px;
+			font-size: 16px;
+			color: #fff;
+			
+		}
+		.other{
+			margin: 10px auto 0;
+			width: 300px;
+			font-size: 12px;
+			color: #666;
+		}
+		#checkbox{
+			width: 14px;
+			height: 14px;
+			border-radius: 2px;
+			vertical-align: middle;
+			margin-right: 7px;
+		}
+		.other a{
+			color: #41a5e1;
+			float: right;
+		}
+		.other a:nth-of-type(1){
+			margin-left: 37px;
+		}
+		.other a:hover{
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h1><%= title %></h1>
+	<div id="log_box">
+		<form>
+			<p><i class='iconfont icon-icon-'></i><input type="text" name="" id="username" placeholder="用户名"></p>
+			<p><i class='iconfont  icon-mima'></i><input type="password" name="" id="psw" placeholder="密码"></p>
+			<p><i class='iconfont icon-ecurityCode'></i><input type="text" name="" id="verification" placeholder="验证码"></p>
+			<p class="verification"></p>
+		</form>
+		<button>登录</button>
+		<div class="other">
+			<input type="checkbox" name="" id="checkbox">保存登录信息
+			<a href="#">去店铺首页&gt;&gt;</a>
+			<a href="#">忘记密码？</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	var oInp = $('.verification');
+	var oVerification = document.getElementById("verification");
+	yanZhengMa();
+	function yanZhengMa(){
+		var arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
+		var str = "";
+		for(var i = 0;i < 4;i ++){
+			var c = parseInt(Math.random()*arr.length);
+			str += arr[c];
+		}
+		oInp.text(str); 
+	}
+	
+	oInp.click(function(){
+		yanZhengMa();
+	});
+	$("button").click(function(){
+		if(oVerification.value != oInp.text()){
+			alert("验证码错误");
+			oVerification.value = "";
+			yanZhengMa();
+			return;
+		}
+		$.ajax({
+			url: "/api/login4ajax",
+			type: "post",
+			data: {
+				username: $("#username").val(),
+				psw: $("#psw").val()
+			},
+			success: function(res) {
+				console.log(res);
+				if(res.code == 1) {
+					location.href = "/index?r=" + new Date().getTime();
+					// location.href = "/dashboard?r=" + new Date().getTime();
+				} else {
+					alert(res.message);
+				}
+			}
+		})
+	})
+</script>
+</html>
